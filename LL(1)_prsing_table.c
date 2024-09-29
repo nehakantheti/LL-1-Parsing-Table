@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include<ctype.h>
 #include<string.h>
+#include<stdlib.h>
 
 void followfirst(char , int , int);
 void findfirst(char , int , int);
@@ -119,8 +120,8 @@ int main(int argc,char **argv)
 		ter[k] = '!';
 	}
 	int ap,vp,sid = 0;
-	for(k=0;k<count;k++){
-		for(kay=0;kay<count;kay++){
+	for(k=0;k<=count;k++){
+		for(kay=0;kay<=count;kay++){
 			if(!isupper(production[k][kay]) && production[k][kay]!= '#' && production[k][kay] != '=' && production[k][kay] != '\0'){
 				vp = 0;
 				for(ap = 0;ap < sid; ap++){
